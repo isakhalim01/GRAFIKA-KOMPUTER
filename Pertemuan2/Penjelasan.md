@@ -4,7 +4,7 @@
   <img width="375" height="112" alt="image" src="https://github.com/user-attachments/assets/c8e9a247-6e31-47ad-a9f7-322fc67850c6" />
 </p>
 
-Untuk kodenya => [Variabel & Tipe Data.py](Fungsi.py)
+Untuk kodenya => [Variabel&TipeData.py](Variabel&TipeData.py)
 
 ## 2. Operasi Aritmatika
 
@@ -12,7 +12,7 @@ Untuk kodenya => [Variabel & Tipe Data.py](Fungsi.py)
   <img width="351" height="93" alt="image" src="https://github.com/user-attachments/assets/8352be4e-d5ec-462d-887b-3569cbcaf986" />
 </p>
 
-Untuk kodenya => [Operasi Aritmatika.py](OperasiAritmatika.py)
+Untuk kodenya => [OperasiAritmatika.py](OperasiAritmatika.py)
 
 ## 3. Input Output
 
