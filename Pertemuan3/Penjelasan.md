@@ -201,57 +201,45 @@ Hasil dari kode diatas :
 
 Berikut Kodenya :
 
-    x1,y1 = 0,0
-    x2,y2 = 5,3
-    n=5
-    
-    points=[]
-    for i in range(n+1):
-        x = x1+(x2-x1)*i/n
-        y = y1+(y2-y1)*i/n
-        points.append((round(x),round(y))) 
-        print(f'Titik {i} : ({x:.1f},{y:.1f})') 
-    print('-------------------')
-    print('Garisnya')
-    lebar = x2+1 
-    tinggi = y2+1
-    for i in range(tinggi):
-        for k in range(lebar):           
-            if i == 0 and k == 0: #pusat
-                print('0', end='')           
-            elif (k, i) in points: #titik
-                print('.', end='')
-            elif i == 0:
-                print('-', end='') #x          
-            elif k == 0:
-                print('|', end='')  #y      
-            else:
-                print(' ', end='')
-        print()
-    print('')
+    # Titik awal dan akhir
+	x0, y0 = 0, 0
+	x1, y1 = 5, 3
+	
+	# Hitung perubahan
+	dx = x1 - x0
+	dy = y1 - y0
+	
+	# Tentukan jumlah langkah
+	steps = max(abs(dx), abs(dy))
+	
+	# Hitung increment vektor tiap langkah
+	x_inc = dx / steps
+	y_inc = dy / steps
+	
+	# List untuk menyimpan titik hasil
+	points = []
+	
+	x = x0
+	y = y0
+	for _ in range(steps + 1):
+	    points.append((round(x), round(y)))
+	    x += x_inc
+	    y += y_inc
+	
+	print("Titik-titik koordinat garis:")
+	for p in points:
+	    print(p)
 
 
 Berikut Penjelasan kode diatas :
 
 <p><i>
-  Kode tersebut digunakan untuk menampilkan pola titik-titik pada layar dengan satu karakter khusus 'X' di posisi tertentu.
-Program membuat persegi panjang dengan lebar 10 dan tinggi 5, menggunakan nested loop:
-
-<ul>
-  <li>
-    Loop luar (for y in range(tinggi)) mengatur baris.
-  </li>
-  <li>
-    Loop dalam (for x in range(lebar)) mengatur kolom di setiap baris.
-  </li>
-</ul>
-Di setiap posisi, program memeriksa: jika x == 3 dan y == 2, maka mencetak 'X'; selain itu, mencetak titik '.'.
-
-Hasil akhirnya adalah pola persegi panjang dengan titik-titik, dan karakter 'X' muncul tepat di kolom ke-4 dan baris ke-3 (indeks mulai dari 0).
+  Kode ini digunakan untuk membuat garis lurus antara dua titik pada koordinat kecil dan menampilkannya secara visual. Program pertama-tama menentukan titik awal (0,0) dan titik akhir (5,3), serta membagi garis menjadi lima titik di antaranya. Dengan menggunakan perhitungan linear, program menghitung posisi setiap titik di sepanjang garis, membulatkan koordinatnya, dan menyimpannya dalam list points, sekaligus menampilkan koordinat titik-titik tersebut.
+Selanjutnya, program membuat grid dengan ukuran cukup untuk menampung semua titik dan menampilkan garis pada grid tersebut. Pada grid: posisi pusat (0,0) ditandai dengan '0', titik-titik di garis ditandai dengan '.', sumbu X digambarkan dengan '-', sumbu Y dengan '|', dan sisanya dibiarkan kosong. Hasil akhirnya adalah representasi visual dari garis lurus antara titik awal dan akhir, lengkap dengan titik-titik yang membentuk garis dan sumbu koordinat.
 </i></p>
 
 Hasil dari kode diatas :
 
 <p align=center>
-  <img width="383" height="193" alt="image" src="https://github.com/user-attachments/assets/a74c8096-4b23-4ba4-abd3-d755a15e34d8" />
+  <img width="341" height="275" alt="image" src="https://github.com/user-attachments/assets/7187cf2f-e2f6-4f98-910f-a4c6c83fcc6c" />
 </p>
