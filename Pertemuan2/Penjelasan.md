@@ -1,1 +1,1 @@
-[Lihat Akses ini](Pertemuan2/Fungsi.py)
+[Lihat Akses ini](Fungsi.py)
